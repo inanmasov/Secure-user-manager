@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS Person;
+DROP TABLE IF EXISTS PersonTmp;
+
+CREATE TABLE IF NOT EXISTS Person (
+  id SERIAL,
+  mail TEXT UNIQUE NOT NULL,
+  password TEXT UNIQUE NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS PersonTmp (
+  mail TEXT UNIQUE NOT NULL,
+  password TEXT UNIQUE NOT NULL,
+  second_factor INT
+);
